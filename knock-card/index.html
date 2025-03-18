@@ -2,24 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomi Lev's Card</title>
+    <title>Tomi Lev's Card</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      type="module"
-      crossorigin
-      src="/knock-card/assets/index-cdWMxxok.js"
-    ></script>
     <link
       rel="stylesheet"
-      crossorigin
-      href="/knock-card/assets/index-CYxM2wfy.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script type="module" crossorigin src="/knock-card/assets/index-LxlFeJKl.js"></script>
+    <link rel="stylesheet" crossorigin href="/knock-card/assets/index-BpqTAX0M.css">
   </head>
   <body>
     <div id="app">
@@ -33,26 +28,39 @@
           </div>
           <div class="overlay-bottom">
             <ul>
-              <li><a href="#">Chat on WhatsApp</a></li>
-              <li><a href="#">Chat on LinkedIn</a></li>
-              <li><a href="#">Chat on Facebook</a></li>
-              <li><a href="#">Chat on Twitter</a></li>
+              <li class="card-btn"><a href="#">Chat with LinkedIn</a></li>
+              <li class="card-btn"><a href="#">Chat with WhatsApp</a></li>
+              <li class="card-btn"><a href="#">Chat with Slack</a></li>
+              <li class="card-btn"><a href="#">Book time for a demo</a></li>
             </ul>
           </div>
+          <div class="overlay-socials">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+            <h3>Powered by Knock</h3>
+          </div>
         </div>
-        <video id="card-video" autoplay muted playsinline>
-          <source src="/knock-card/Black_Matte-v5.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div id="video-container">
+          <img
+            id="fallback-image"
+            src="/knock-card/assets/black-matte-fallback-BUOFyqog.jpg"
+            style="display: none"
+          />
+          <video id="card-video" style="opacity: 0" autoplay muted playsinline>
+            <source src="/knock-card/assets/Black_Matte-v5-nobuttons-B1cAL3kw.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
-    </div>
-    <script>
-      document
-        .getElementById("card-video")
-        .addEventListener("ended", function () {
-          this.pause();
-          this.currentTime = this.duration;
-        });
-    </script>
+    </div>
   </body>
 </html>
